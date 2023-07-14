@@ -28,8 +28,19 @@ These are the global settings for the EdgeOrder API.
 title: EdgeOrderManagementClient
 description: Edge Order API's
 openapi-type: arm
-tag: package-2022-05-preview
+tag: package-2023-05-preview
 ```
+
+### Tag: package-2023-05-preview
+
+These settings apply only when `--tag=package-2023-05-preview` is specified on the command line.
+
+``` yaml $(tag) == 'package-2023-05-preview'
+input-file:
+- Microsoft.EdgeOrder/preview/2023-05-01-preview/edgeorder.json
+- Microsoft.EdgeOrder/preview/2023-05-01-preview/hcicatalog.json
+```
+---
 
 ### Tag: package-2022-05-preview
 
@@ -59,6 +70,20 @@ These settings apply only when `--tag=package-2020-12-preview` is specified on t
 input-file:
 - Microsoft.EdgeOrder/preview/2020-12-01-preview/edgeorder.json
 ```
+---
+
+## Suppression
+
+``` yaml
+directive:
+  - suppress: TopLevelResourcesListBySubscription
+    from: hcicatalog.json
+    reason: This is an tenant-level resource
+  - suppress: PathForPutOperation
+    from: hcicatalog.json
+    reason: This is an tenant-level resource
+```
+
 ---
 
 # Code Generation
