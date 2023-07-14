@@ -1316,6 +1316,10 @@
           "format": "int32",
           "description": "Quantity of the product.",
           "type": "integer"
+        },
+        "provisioningDetails": {
+          "description": "List Provisioning Details for Devices in Additional Config.",
+          "$ref": "#/definitions/ProvisioningDetails"                    
         }
       }
     },
@@ -2353,6 +2357,11 @@
           "description": "Management Resource Tenant ID.",
           "type": "string",
           "readOnly": true
+        },
+        "provisioningDetails": {
+          "$ref": "#/definitions/ProvisioningDetails",
+          "description": "Provisioning Details for the device.",
+          "readOnly": true
         }
       }
     },
@@ -2812,7 +2821,8 @@
           "description": "Order item type.",
           "enum": [
             "Purchase",
-            "Rental"
+            "Rental",
+            "External"
           ],
           "type": "string",
           "x-ms-enum": {
@@ -2826,6 +2836,10 @@
               {
                 "value": "Rental",
                 "description": "Rental OrderItem."
+              },
+              {
+                "value": "External",
+                "description": "Orders placed outside of azure."
               }
             ]
           }
@@ -2851,6 +2865,10 @@
               }
             ]
           }
+        },
+        "siteDetails": {
+          "$ref": "#/definitions/SiteDetails",
+          "description": "Site Related Details."                  
         },
         "currentStage": {
           "$ref": "#/definitions/StageDetails",
@@ -2999,7 +3017,6 @@
       "description": "Represents order item properties.",
       "required": [
         "orderItemDetails",
-        "addressDetails",
         "orderId"
       ],
       "type": "object",
@@ -3340,6 +3357,10 @@
           "description": "Device details of the parent configuration.",
           "readOnly": true
         },
+        "parentProvisioningDetails": {
+          "$ref": "#/definitions/ProvisioningDetails",
+          "description": "Device Provisioning Details for Parent."
+        },
         "optInAdditionalConfigurations": {
           "description": "List of additional configurations customer wants in the order item apart from the ones included in the base configuration.",
           "uniqueItems": false,
@@ -3365,6 +3386,62 @@
           "readOnly": true
         }
       }
+    },
+    "ProvisioningDetails": {
+      "description": "Details Related To Provision Resource.",
+      "required": [
+        "provisoningArmId"
+      ],
+      "type": "object",
+      "properties": {
+        "quantity": {
+          "format": "int32",
+          "description": "Quantity of the devices.",
+          "type": "integer"
+        },
+        "provisoningArmId": {
+          "description": "Provisioning Resource Arm ID.",
+          "type": "string"
+        },
+        "provisioningEndPoint": {
+          "description": "Provisioning End Point.",
+          "type": "string"
+        },
+        "serialNumber": {
+          "description": "Serial Number for the Device.",
+          "type": "string"
+        },
+        "vendorName": {
+          "description": "Vendor Name for the Device , (for 1P devices - Microsoft).",
+          "type": "string"
+        },
+        "readyToConnectArmId": {
+          "description": "Arc Enabled Resource Arm id.",
+          "type": "string"
+        },
+        "managementResourceArmId": {
+          "description": "Management Resource ArmId.",
+          "type": "string"
+        },
+        "uniqueDeviceIdentifier": {
+          "description": "Unqiue Identity for a Device.",
+          "type": "string",
+          "readOnly": true
+        }
+      }
+    },
+    "SiteDetails": {
+      "description": "Represents Site Related Details.",
+      "required": [
+        "siteId"
+      ],
+      "type": "object",
+      "properties": {
+        "siteId": {
+          "description": "Unique Id, Identifying A Site.",
+          "type": "string"
+         }
+       }
     },
     "ProductFamilies": {
       "description": "The list of product families.",
@@ -3826,6 +3903,7 @@
             "ReadyToShip",
             "Shipped",
             "Delivered",
+            "ReadyToSetup",
             "InUse",
             "ReturnInitiated",
             "ReturnPickedUp",
@@ -3862,6 +3940,10 @@
               {
                 "value": "Delivered",
                 "description": "Order is delivered to customer."
+              },
+              {
+                "value": "ReadyToSetup",
+                "description": "Order is ready to get cloud connected."
               },
               {
                 "value": "InUse",
