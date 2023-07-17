@@ -1,10 +1,11 @@
 {
   "parameters": {
+    "location": "eastus",
     "catalogName": "default",
     "platformId": "testPlatformId",
     "api-version": "2023-05-01-preview",
     "Referer": [
-      "https://localhost/providers/Microsoft.EdgeOrder/hciFlightCatalog/default/platforms/testPlatformId?api-version=2023-05-01-preview"
+      "https://localhost/providers/Microsoft.EdgeOrder/locations/eastus/hciFlightCatalog/default/platforms/testPlatformId?api-version=2023-05-01-preview"
     ]
   },
   "responses": {

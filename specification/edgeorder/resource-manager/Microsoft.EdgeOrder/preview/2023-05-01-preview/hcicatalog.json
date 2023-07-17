@@ -33,7 +33,7 @@
     }
   },
   "paths": {
-    "/providers/Microsoft.EdgeOrder/hciCatalog": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciCatalog": {
       "get": {
         "tags": [
           "HciCatalog"
@@ -44,6 +44,9 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+          },
           {
             "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
           }
@@ -72,7 +75,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciCatalog/{catalogName}": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciCatalog/{catalogName}": {
       "get": {
         "tags": [
           "HciCatalog"
@@ -83,6 +86,9 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+          },
           {
             "$ref": "#/parameters/catalogNameParameter"
           },
@@ -111,7 +117,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciCatalog/{catalogName}/listSolutionRecommendations": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciCatalog/{catalogName}/listSolutionRecommendations": {
       "post": {
         "tags": [
           "HciCatalog"
@@ -125,6 +131,9 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+          },
           {
             "$ref": "#/parameters/catalogNameParameter"
           },
@@ -165,7 +174,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciCatalog/{catalogName}/platforms": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciCatalog/{catalogName}/platforms": {
       "get": {
         "tags": [
           "Platforms"
@@ -176,6 +185,9 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+          },
           {
             "$ref": "#/parameters/catalogNameParameter"
           },
@@ -214,7 +226,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciCatalog/{catalogName}/platforms/{platformId}": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciCatalog/{catalogName}/platforms/{platformId}": {
       "get": {
         "tags": [
           "Platforms"
@@ -225,6 +237,9 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+          },
           {
             "$ref": "#/parameters/catalogNameParameter"
           },
@@ -256,7 +271,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciCatalog/{catalogName}/locations/{location}/projects": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciCatalog/{catalogName}/projects": {
       "get": {
         "tags": [
           "Project"
@@ -268,10 +283,10 @@
         ],
         "parameters": [
           {
-            "$ref": "#/parameters/catalogNameParameter"
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+            "$ref": "#/parameters/catalogNameParameter"
           },
           {
             "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
@@ -313,7 +328,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciCatalog/{catalogName}/locations/{location}/projects/{projectName}": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciCatalog/{catalogName}/projects/{projectName}": {
       "get": {
         "tags": [
           "Project"
@@ -325,10 +340,10 @@
         ],
         "parameters": [
           {
-            "$ref": "#/parameters/catalogNameParameter"
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+            "$ref": "#/parameters/catalogNameParameter"
           },
           {
             "$ref": "#/parameters/projectNameParameter"
@@ -523,7 +538,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciCatalog/{catalogName}/locations/{location}/projects/{projectName}/solutionRecommendations": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciCatalog/{catalogName}/projects/{projectName}/solutionRecommendations": {
       "post": {
         "tags": [
           "Project"
@@ -535,10 +550,10 @@
         ],
         "parameters": [
           {
-            "$ref": "#/parameters/catalogNameParameter"
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+            "$ref": "#/parameters/catalogNameParameter"
           },
           {
             "$ref": "#/parameters/projectNameParameter"
@@ -571,7 +586,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciCatalog/{catalogName}/search": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciCatalog/{catalogName}/search": {
       "post": {
         "tags": [
           "HciCatalog"
@@ -585,6 +600,9 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+          },
           {
             "$ref": "#/parameters/catalogNameParameter"
           },
@@ -622,7 +640,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciCatalog/{catalogName}/vendors": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciCatalog/{catalogName}/vendors": {
       "get": {
         "tags": [
           "Vendors"
@@ -633,6 +651,9 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+          },
           {
             "$ref": "#/parameters/catalogNameParameter"
           },
@@ -671,7 +692,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciCatalog/{catalogName}/vendors/{vendorId}": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciCatalog/{catalogName}/vendors/{vendorId}": {
       "get": {
         "tags": [
           "Vendors"
@@ -682,6 +703,9 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+          },
           {
             "$ref": "#/parameters/catalogNameParameter"
           },
@@ -713,7 +737,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciFlightCatalog": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciFlightCatalog": {
       "get": {
         "tags": [
           "HciFlightCatalog"
@@ -724,6 +748,9 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+          },
           {
             "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
           }
@@ -752,7 +779,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciFlightCatalog/{catalogName}": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciFlightCatalog/{catalogName}": {
       "get": {
         "tags": [
           "HciFlightCatalog"
@@ -763,6 +790,9 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+          },
           {
             "$ref": "#/parameters/catalogNameParameter"
           },
@@ -791,7 +821,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciFlightCatalog/{catalogName}/listSolutionRecommendations": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciFlightCatalog/{catalogName}/listSolutionRecommendations": {
       "post": {
         "tags": [
           "HciCatalog"
@@ -805,6 +835,9 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+          },
           {
             "$ref": "#/parameters/catalogNameParameter"
           },
@@ -845,7 +878,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciFlightCatalog/{catalogName}/platforms": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciFlightCatalog/{catalogName}/platforms": {
       "get": {
         "tags": [
           "Platforms"
@@ -856,6 +889,9 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+          },
           {
             "$ref": "#/parameters/catalogNameParameter"
           },
@@ -894,7 +930,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciFlightCatalog/{catalogName}/platforms/{platformId}": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciFlightCatalog/{catalogName}/platforms/{platformId}": {
       "get": {
         "tags": [
           "Platforms"
@@ -905,6 +941,9 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+          },
           {
             "$ref": "#/parameters/catalogNameParameter"
           },
@@ -936,7 +975,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciFlightCatalog/{catalogName}/locations/{location}/projects": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciFlightCatalog/{catalogName}/projects": {
       "get": {
         "tags": [
           "Project"
@@ -948,10 +987,10 @@
         ],
         "parameters": [
           {
-            "$ref": "#/parameters/catalogNameParameter"
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+            "$ref": "#/parameters/catalogNameParameter"
           },
           {
             "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
@@ -993,7 +1032,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciFlightCatalog/{catalogName}/locations/{location}/projects/{projectName}": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciFlightCatalog/{catalogName}/projects/{projectName}": {
       "get": {
         "tags": [
           "Project"
@@ -1005,10 +1044,10 @@
         ],
         "parameters": [
           {
-            "$ref": "#/parameters/catalogNameParameter"
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+            "$ref": "#/parameters/catalogNameParameter"
           },
           {
             "$ref": "#/parameters/projectNameParameter"
@@ -1203,7 +1242,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciFlightCatalog/{catalogName}/locations/{location}/projects/{projectName}/solutionRecommendations": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciFlightCatalog/{catalogName}/projects/{projectName}/solutionRecommendations": {
       "post": {
         "tags": [
           "Project"
@@ -1215,10 +1254,10 @@
         ],
         "parameters": [
           {
-            "$ref": "#/parameters/catalogNameParameter"
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
           },
           {
-            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+            "$ref": "#/parameters/catalogNameParameter"
           },
           {
             "$ref": "#/parameters/projectNameParameter"
@@ -1251,7 +1290,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciFlightCatalog/{catalogName}/search": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciFlightCatalog/{catalogName}/search": {
       "post": {
         "tags": [
           "HciFlightCatalog"
@@ -1265,6 +1304,9 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+          },
           {
             "$ref": "#/parameters/catalogNameParameter"
           },
@@ -1302,7 +1344,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciFlightCatalog/{catalogName}/vendors": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciFlightCatalog/{catalogName}/vendors": {
       "get": {
         "tags": [
           "Vendors"
@@ -1313,6 +1355,9 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+          },
           {
             "$ref": "#/parameters/catalogNameParameter"
           },
@@ -1351,7 +1396,7 @@
         }
       }
     },
-    "/providers/Microsoft.EdgeOrder/hciFlightCatalog/{catalogName}/vendors/{vendorId}": {
+    "/providers/Microsoft.EdgeOrder/locations/{location}/hciFlightCatalog/{catalogName}/vendors/{vendorId}": {
       "get": {
         "tags": [
           "Vendors"
@@ -1362,6 +1407,9 @@
           "application/json"
         ],
         "parameters": [
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/LocationParameter"
+          },
           {
             "$ref": "#/parameters/catalogNameParameter"
           },
@@ -1681,6 +1729,12 @@
           "description": "Description of the filter.",
           "type": "string",
           "readOnly": true
+        },
+        "count": {
+          "format": "int64",
+          "description": "The approximate count of results falling within the bucket for this filter value.",
+          "type": "integer",
+          "readOnly": true
         }
       },
       "additionalProperties": false
@@ -1700,32 +1754,9 @@
           "description": "Display text of the filter value.",
           "allOf": [
             {
-              "$ref": "#/definitions/FilterValueMetadata"
+              "$ref": "#/definitions/FilterMetadata"
             }
           ],
-          "readOnly": true
-        }
-      },
-      "additionalProperties": false
-    },
-    "FilterValueMetadata": {
-      "description": "Filter value metadata details.",
-      "type": "object",
-      "properties": {
-        "displayText": {
-          "description": "Display text of the filter value.",
-          "type": "string",
-          "readOnly": true
-        },
-        "description": {
-          "description": "Description of the filter value.",
-          "type": "string",
-          "readOnly": true
-        },
-        "count": {
-          "format": "int64",
-          "description": "The approximate count of results falling within the bucket for this filter value.",
-          "type": "integer",
           "readOnly": true
         }
       },

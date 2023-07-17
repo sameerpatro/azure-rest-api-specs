@@ -1,11 +1,11 @@
 {
   "parameters": {
+    "location": "eastus",
     "catalogName": "default",
-    "location": "westus",
     "projectName": "testProject",
     "api-version": "2023-05-01-preview",
     "Referer": [
-      "https://localhost/providers/Microsoft.EdgeOrder/hciCatalog/default/locations/westus/projects/testProject?api-version=2023-05-01-preview"
+      "https://localhost/providers/Microsoft.EdgeOrder/locations/eastus/hciCatalog/default/projects/testProject?api-version=2023-05-01-preview"
     ]
   },
   "responses": {

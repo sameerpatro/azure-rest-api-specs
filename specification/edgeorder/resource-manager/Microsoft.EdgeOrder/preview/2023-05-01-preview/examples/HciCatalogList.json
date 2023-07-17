@@ -1,8 +1,9 @@
 {
   "parameters": {
+    "location": "eastus",
     "api-version": "2023-05-01-preview",
     "Referer": [
-      "https://localhost/providers/Microsoft.EdgeOrder/hciCatalog?api-version=2023-05-01-preview"
+      "https://localhost/providers/Microsoft.EdgeOrder/locations/eastus/hciCatalog?api-version=2023-05-01-preview"
     ]
   },
   "responses": {
