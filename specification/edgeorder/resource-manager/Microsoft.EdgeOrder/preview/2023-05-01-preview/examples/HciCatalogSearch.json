@@ -1,9 +1,10 @@
 {
   "parameters": {
+    "location": "eastus",
     "catalogName": "default",
     "api-version": "2023-05-01-preview",
     "Referer": [
-      "https://localhost/providers/Microsoft.EdgeOrder/hciCatalog/default/search?api-version=2023-05-01-preview"
+      "https://localhost/providers/locations/eastus/Microsoft.EdgeOrder/hciCatalog/default/search?api-version=2023-05-01-preview"
     ],
     "hciCatalogSearchRequest": {
       "resourceType": "Platforms",

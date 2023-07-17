@@ -1,11 +1,11 @@
 {
   "parameters": {
+    "location": "eastus",
     "catalogName": "default",
-    "location": "westus",
     "projectName": "abc",
     "api-version": "2023-05-01-preview",
     "Referer": [
-      "https://localhost/providers/Microsoft.EdgeOrder/hciFlightCatalog/default//projects/abc/locations/westus/listSolutionRecommendations?api-version=2023-05-01-preview"
+      "https://localhost/providers/Microsoft.EdgeOrder/locations/eastus/hciFlightCatalog/default/projects/abc/listSolutionRecommendations?api-version=2023-05-01-preview"
     ]
   },
   "responses": {

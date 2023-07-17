@@ -1,14 +1,14 @@
 {
   "parameters": {
+    "location": "eastus",
     "catalogName": "default",
     "projectName": "testProject",
-    "location": "westus",
     "api-version": "2023-05-01-preview",
     "User-Agent": [
       "vscode-restclient"
     ],
     "Referer": [
-      "https://localhost/providers/Microsoft.EdgeOrder/hciFlightCatalog/default/locations/westus/projects/testProject?api-version=2023-05-01-preview"
+      "https://localhost/providers/Microsoft.EdgeOrder/locations/eastus/hciFlightCatalog/default/projects/testProject?api-version=2023-05-01-preview"
     ],
     "Content-Type": [
       "application/json; charset=utf-8"

@@ -1,10 +1,11 @@
 {
   "parameters": {
+    "location": "eastus",
     "catalogName": "default",
     "vendorId": "testVendorId",
     "api-version": "2023-05-01-preview",
     "Referer": [
-      "https://localhost/providers/Microsoft.EdgeOrder/hciCatalog/default/vendors/testVendorId?api-version=2023-05-01-preview"
+      "https://localhost/providers/Microsoft.EdgeOrder/locations/eastus/hciCatalog/default/vendors/testVendorId?api-version=2023-05-01-preview"
     ]
   },
   "responses": {
